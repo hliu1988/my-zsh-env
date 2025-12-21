@@ -1,0 +1,6 @@
+[core]
+	editor = vim
+	excludesfile = $HOME/.gitignore
+	quotepath = false
+[pager]
+	branch = false

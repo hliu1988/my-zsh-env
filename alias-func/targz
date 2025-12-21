@@ -1,0 +1,13 @@
+
+# Create a .tar.gz archive, using zopfli, pigz or gzip for compression
+function targz() {
+  if [ $# -gt 1 ]; then
+    local file="$2.tgz"
+    (set -x; tar -czf "${file}" "$1")
+  else
+    local file="${@%/}.tgz" # from xx/ to xx.tgz
+    (set -x; tar -czf "${file}" "$1")
+  fi
+}
+
+targz "$@"

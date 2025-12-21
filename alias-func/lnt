@@ -1,0 +1,6 @@
+#!/bin/bash
+
+FROM="$(realpath "$1")"
+DEST=${2:-.}
+ln -sfn "$FROM" "$DEST/t.sh" # force create
+ls --color=tty -l "$DEST/t.sh"

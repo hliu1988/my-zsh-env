@@ -1,0 +1,51 @@
+git ls-remote --tags origin # list all remote tags
+echo -1 | sudo dd of=/proc/sys/kernel/perf_event_paranoid; echo 0 | sudo dd of=/proc/sys/kernel/kptr_restrict
+
+git config --local user.email "liuhaots@163.com"; git config --local user.name "Hao Liu";
+git commit --amend --reset-author
+git commit --amend --no-edit --date='now'
+git config --global core.excludesfile ~/.gitignore
+
+# ubuntu 22.04
+sudo service network-manager restart
+sudo systemctl restart NetworkManager.service
+
+sed -i '/ignore_errors/astrict_rundir_verify = 0' 
+sed -i -e "s/\$SPECCOPYNUM/5/g"
+sed -i '/goarch/d'
+
+sudo grubby --info=ALL | grep ^kernel; sudo grubby --default-index
+sudo grubby --set-default=
+
+cat /etc/default/grub
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+mkdir -p gcov_report; gcovr -r ./ . --html -o gcov_report/coverage.html --html-details
+
+PROG_DIR=$(cd $(dirname $0) && pwd)
+
+dump_sys.sh --regdump --quiet --power
+
+while sleep 1; do cmd; done
+
+## golang
+wget https://go.dev/dl/go1.23.4.linux-arm64.tar.gz; go1.23.4.linux-arm64.tar.gz; mv go go1.23.4
+export GOROOT_BOOTSTRAP=
+
+git config --global core.excludesfile ~/.gitignore; ln -s $e/40-archive/settings/gitignore-global ~/.gitignore
+
+# in China
+export GOPROXY=https://goproxy.cn; export GOSUMDB=sum.golang.org
+
+numactl --localalloc --physcpubind=
+
+go tool pprof -http=localhost:8090
+go tool trace
+go tool -S objdump -gnu -s
+go install github.com/go-delve/delve/cmd/dlv@latest
+objdump --disassemble=
+
+make CFLAGS="-g3 -O0" CXXFLAGS="-g3 -O0" -j10; make install
+
+# find latest
+find . -type f -printf '%T@ %p\\n' | sort -n | tail -1 | cut -f2- -d" "

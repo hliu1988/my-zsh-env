@@ -1,0 +1,26 @@
+#!/bin/bash
+
+PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
+
+alias vt='vi t.sh'
+alias v='vi'
+alias c='cat'
+alias ct='cat t.sh'
+alias ls='ls --color=auto'
+alias lt='ls -lrt'
+alias l='ls'
+alias ww='which'
+
+function t() {
+  sh t.sh $@ | tee t.log
+}
+
+function clear() {
+  rm -rf *.c.*
+  rm -rf *.s
+}
+function cd() { builtin cd "$@" && ls -rt; }
+shopt -s autocd
+
+cd ~
+

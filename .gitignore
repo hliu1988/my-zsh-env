@@ -1,0 +1,8 @@
+*.cfg.*
+*.swp
+.vscode/
+local
+.local
+out/
+*.log
+__pycache__/

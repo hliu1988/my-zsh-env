@@ -1,0 +1,11 @@
+#!/bin/bash
+
+funcs=${2:-./funcs}
+readarray -t funcs < ${funcs}
+
+for func in "${funcs[@]}"
+do
+   echo "$func"
+   cat "$1" | sed "/<$func>:/,/^$/!d"
+   # cat "$1" | sed "/<$func>:/,/^$/!d" | wc -l
+done

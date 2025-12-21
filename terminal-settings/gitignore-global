@@ -1,0 +1,29 @@
+.vscode
+__pycache__
+
+# from https://gist.github.com/subfuzion/db7f57fff2fb6998a16c
+# Node
+npm-debug.log
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# WebStorm
+.idea/
+
+.obsidian/
+
+# vi
+*~
+
+# General
+log/
+dump/
+# *.log
+
+# etc...
+
+ISO_Fortran_binding.h

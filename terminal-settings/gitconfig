@@ -1,0 +1,14 @@
+[user]
+	email = liuhaots@163.com
+	name = Hao Liu
+[core]
+	editor = vim
+	quotepath = false
+[credential]
+	helper = store
+[filesystem "Ubuntu|11.0.4|/dev/sda2"]
+	timestampResolution = 13000 nanoseconds
+	minRacyThreshold = 5554 microseconds
+[http]
+[pager]
+	branch = false

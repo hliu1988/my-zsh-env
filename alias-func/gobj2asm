@@ -1,0 +1,14 @@
+#/bin/bash
+
+if [ $# -lt 2 ]; then
+  echo "Usage: $0 <binary> <func> [rename]"
+  exit 1
+fi
+if [ $# -lt 3 ]; then
+  NEW_NAME=$2
+else
+  NEW_NAME=$3
+fi
+
+go tool objdump -gnu -S -s "$2" $1 | tee $NEW_NAME.S
+

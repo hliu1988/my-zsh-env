@@ -1,0 +1,2 @@
+# This will set ZDOTDIR to the :h parent of the :P realpath of the ${(%):-%x} file being sourced.
+export ZDOTDIR=${${(%):-%x}:P:h}

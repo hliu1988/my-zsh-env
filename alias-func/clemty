@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# clear garbage
+clEmpty() {
+    DIR=${1:-.}
+    find $DIR -type f -empty -print -delete
+    find $DIR -type d -empty -print -delete
+    find . -xtype l -print -delete # invalid symbol links
+
+    # echo
+    # ls -tA $DIR
+}
+
+clEmpty $*
