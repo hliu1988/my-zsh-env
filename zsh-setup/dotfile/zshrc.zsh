@@ -108,7 +108,6 @@ source $e/zsh-setup/setup-env.sh || true
 [ -f $z/.fzf.zsh ] && source $z/.fzf.zsh || true
 # local specific
 [ -f $z/env.zsh ] && source $z/env.zsh || true
-[ -f $z/proxy.sh ] && source $z/proxy.sh || true
 # [ -f ~/.pyvenv/bin/activate ] && source ~/.pyvenv/bin/activate || true
 
 # Simplify $PATH
