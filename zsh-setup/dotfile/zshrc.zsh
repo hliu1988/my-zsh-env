@@ -88,21 +88,6 @@ export FZF_COMPLETION_TRIGGER=';'
 
 [ $PWD = $z ] && cd $HOME && dirs -c
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('$HOME/.local/share/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>&1 /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "$HOME/.local/share/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "$HOME/.local/share/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="$HOME/.local/share/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
-
 # set enviroments
 source $e/zsh-setup/setup-env.sh || true
 [ -f $z/.fzf.zsh ] && source $z/.fzf.zsh || true
