@@ -88,6 +88,23 @@ export FZF_COMPLETION_TRIGGER=';'
 
 [ $PWD = $z ] && cd $HOME && dirs -c
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/hliu/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/hliu/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/hliu/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/hliu/anaconda3/bin:$PATH"
+    fi
+fi
+# 清理临时变量 __conda_setup（存储 conda shell.zsh hook 的输出）
+# 避免污染你的 shell 环境
+unset __conda_setup
+# <<< conda initialize <<<
+
 # set enviroments
 source $e/zsh-setup/setup-env.sh || true
 [ -f $z/.fzf.zsh ] && source $z/.fzf.zsh || true
